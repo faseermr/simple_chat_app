@@ -37,12 +37,12 @@ io.on("connect", (socket) => {
     socket.join(response.room);
     socket.emit("message", {
       username: "admin",
-      text: `Welcome ${response.username} `,
+      text: `Welcome ${response.username.toUpperCase()} `,
     });
 
     socket.broadcast.to(response.room).emit("message", {
       username: "admin",
-      text: `${response.username} has joined`,
+      text: `${response.username.toUpperCase()} has joined`,
     });
 
     io.to(response.room).emit("roomMembers", getRoomUsers(response.room));

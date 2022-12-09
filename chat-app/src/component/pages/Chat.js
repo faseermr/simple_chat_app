@@ -68,7 +68,7 @@ const Chat = () => {
           <p>Active Users</p>
           <ul>
             {users.map((e, i) => (
-              <li key={i}>{e.username}</li>
+              <li key={i}>{e.username.toUpperCase()}</li>
             ))}
           </ul>
         </div>
@@ -122,7 +122,9 @@ const Chat = () => {
                   className="form-control input-sm chat_input"
                   placeholder="Write your message here..."
                 />
-                <button onClick={(e) => sendMessage(e)}>click</button>
+                <button className="btn_send" onClick={(e) => sendMessage(e)}>
+                  Send
+                </button>
               </div>
             </div>
           </div>

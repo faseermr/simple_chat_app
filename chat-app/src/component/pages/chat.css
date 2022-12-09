@@ -143,3 +143,10 @@ img {
   left: 0px;
   bottom: 0;
 }
+
+.btn_send {
+  background-color: blue;
+  color: #fff;
+  border-radius: 0 10% 10% 0;
+  border: none;
+}
